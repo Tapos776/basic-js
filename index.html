@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    </style>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@3.5.1/dist/full.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <header class="bg-slate-300">
+        <div class="container mx-auto">
+            <div class="navbar bg-gray-800  rounded-lg py-5  px-10 text-white">
+                <div class="flex-1">
+                    <a class="btn btn-ghost normal-case text-3xl font-extrabold hover:animate-spin ">E-COMMERCE</a>
+                </div>
+                <div class="flex-none">
+                    <div class="dropdown dropdown-end">
+                        <label tabindex="0" class="btn btn-ghost btn-circle">
+                            <div class="indicator">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 -mx-10" fill="rounded-lg" viewBox="0 0 24 24"
+                                    stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                        d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+                                </svg>
+                                <span class="badge badge-sm indicator-item text-xl text-white bg-orange-600 p-2 " id="item">0</span>
+                            </div>
+                        </label>
+                        <div tabindex="0" class="mt-3 z-[1] card card-compact dropdown-content w-52 bg-gray-700 shadow">
+                            <div class="card-body">
+                                <p class="font-bold text-xl"><span id="items">0 </span><span> Items</span></p>
+                                <p class="text-info text-xl text-white">Subtotal: <span id="subtotal">00 </span> <span> ৳৳</span></p>
+                                <div class="card-actions">
+                                    <button class="btn btn-primary btn-block">View cart</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="dropdown dropdown-end">
+                        <label tabindex="0" class="btn btn-ghost btn-circle avatar">
+                            <div class="w-14 h-14 rounded-full -mx-10">
+                                <img src="/images/3357531.jpg" />
+                            </div>
+                        </label>
+                        <ul tabindex="0"
+                            class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow  bg-slate-300 text-2xl rounded-box w-52 text-gray-600">
+                            <li>
+                                <a class="justify-between">
+                                    Profile
+                                    <span class="badge">New</span>
+                                </a>
+                            </li>
+                            <li><a>Settings</a></li>
+                            <li><a>Logout</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class=" bg-slate-300 py-5">
+        <div class="container mx-auto">
+            <section>
+                <div class="flex lg:flex-row md:flex-row  flex-col  gap-10">
+                    <div class="">
+                        <div class=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                            <div class="card  bg-gray-900 shadow-2xl shadow-zinc-950 text-white">
+                                <figure class="px-10 pt-10">
+                                    <img src="images/picture-1.PNG" alt="Shoes" class="rounded-xl" />
+                                </figure>
+                                <div class="card-body items-center text-center">
+                                    <h2 class="card-title text-3xl font-bold">Cup of Tea</h2>
+                                    <p>If a dog chews tea whose tea does he choose?</p>
+                                    <p class="text-2xl font-bold">200 ৳৳</p>
+                                    <div onclick="  productCard(this)" class="card-actions">
+                                        <button class="btn btn-primary">Buy Now</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- card2 -->
+                            <div class="card  bg-gray-900 shadow-2xl shadow-zinc-950 text-white">
+                                <figure class="px-10 pt-10">
+                                    <img src="images/picture-2.PNG" alt="Shoes" class="rounded-xl" />
+                                </figure>
+                                <div class="card-body items-center text-center">
+                                    <h2 class="card-title text-3xl font-bold">Basket Fruits!</h2>
+                                    <p>If a dog chews fruits whose fruits does he choose?</p>
+                                    <p class="text-2xl font-bold">330 ৳৳</p>
+                                    <div onclick="  productCard(this)" class="card-actions">
+                                        <button class="btn btn-primary">Buy Now</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- card 3 -->
+                            <div class="card  bg-gray-900 shadow-2xl shadow-zinc-950 text-white">
+                                <figure class="px-10 pt-10">
+                                    <img src="images/picture-3.PNG" alt="Shoes" class="rounded-xl" />
+                                </figure>
+                                <div class="card-body items-center text-center">
+                                    <h2 class="card-title text-3xl font-bold">Plate Fruit!</h2>
+                                    <p>If a dog chews fruits whose fruits does he choose?</p>
+                                    <p class="text-2xl font-bold">520 ৳৳</p>
+                                    <div onclick="  productCard(this)" class="card-actions">
+                                        <button class="btn btn-primary">Buy Now</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- card 4 -->
+                            <div class="card  bg-gray-900 shadow-2xl shadow-zinc-950 text-white">
+                                <figure class="px-10 pt-10">
+                                    <img src="images/picture-4.PNG" alt="Shoes" class="rounded-xl" />
+                                </figure>
+                                <div class="card-body items-center text-center">
+                                    <h2 class="card-title text-3xl font-bold">Vegetable!</h2>
+                                    <p>If a dog chews fruits whose fruits does he choose?</p>
+                                    <p class="text-2xl font-bold">720 ৳৳</p>
+                                    <div onclick="  productCard(this)" class="card-actions">
+                                        <button class="btn btn-primary">Buy Now</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 my-10 gap-8">
+                            <!-- card 5 -->
+                            <div class="card  bg-gray-900 shadow-2xl shadow-zinc-950 text-white">
+                                <figure class="px-10 pt-10">
+                                    <img src="images/picture-5.PNG" alt="Shoes" class="rounded-xl" />
+                                </figure>
+                                <div class="card-body items-center text-center">
+                                    <h2 class="card-title text-3xl font-bold">Furniture!</h2>
+                                    <p>If a dog chews furniture whose furniture does he choose?</p>
+                                    <p class="text-2xl font-bold">2000 ৳৳</p>
+                                    <div onclick="  productCard(this)" class="card-actions">
+                                        <button class="btn btn-primary">Buy Now</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- card 6 -->
+                            <div class="card  bg-gray-900 shadow-2xl shadow-zinc-950 text-white">
+                                <figure class="px-10 pt-10">
+                                    <img src="images/picture-6.PNG" alt="Shoes" class="rounded-xl" />
+                                </figure>
+                                <div class="card-body items-center text-center">
+                                    <h2 class="card-title text-3xl font-bold"> Chair Sofa,Table !</h2>
+                                    <p>If a dog chews Chair, Sofa,Table whose furniture does he choose?</p>
+                                    <p class="text-2xl font-bold">7600 ৳৳</p>
+                                    <div onclick="  productCard(this)" class="card-actions">
+                                        <button class="btn btn-primary">Buy Now</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- card 7 -->
+                            <div class="card  bg-gray-900 shadow-2xl shadow-zinc-950 text-white">
+                                <figure class="px-10 pt-10">
+                                    <img src="images/picture-7.PNG" alt="Shoes" class="rounded-xl" />
+                                </figure>
+                                <div class="card-body items-center text-center">
+                                    <h2 class="card-title text-3xl font-bold">Sofa!</h2>
+                                    <p>If a dog chews Soa whose sofas does he choose?</p>
+                                    <p class="text-2xl font-bold">9200 ৳৳</p>
+                                    <div onclick="  productCard(this)" class="card-actions">
+                                        <button class="btn btn-primary">Buy Now</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- card 8 -->
+                            <div class="card  bg-gray-900 shadow-2xl shadow-zinc-950 text-white">
+                                <figure class="px-10 pt-10">
+                                    <img src="images/picture-8.PNG" alt="Shoes" class="rounded-xl" />
+                                </figure>
+                                <div class="card-body items-center text-center">
+                                    <h2 class="card-title text-3xl font-bold">Soft Sofa!</h2>
+                                    <p>If a dog chews Soa whose sofas does he choose?</p>
+                                    <p class="text-2xl font-bold">12200 ৳৳</p>
+                                    <div onclick="  productCard(this)" class="card-actions">
+                                        <button class="btn btn-primary">Buy Now</button>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+                        <div class=" grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 my-10 gap-8">
+                            <!-- card 9 -->
+                            <div class="card  bg-gray-900 shadow-2xl shadow-zinc-950 text-white">
+                                <figure class="px-10 pt-10">
+                                    <img src="images/picture-10.PNG" alt="Shoes" class="rounded-xl" />
+                                </figure>
+                                <div class="card-body items-center text-center">
+                                    <h2 class="card-title text-3xl font-bold">White Car!</h2>
+                                    <p>If a dog chews car whose car does he choose?</p>
+                                    <p class="text-2xl font-bold">1900200 ৳৳</p>
+                                    <div onclick="  productCard(this)" class="card-actions">
+                                        <button class="btn btn-primary">Buy Now</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- card 10 -->
+                            <div class="card  bg-gray-900 shadow-2xl shadow-zinc-950 text-white">
+                                <figure class="px-10 pt-10">
+                                    <img src="images/picture-11.PNG" alt="Shoes" class="rounded-xl" />
+                                </figure>
+                                <div class="card-body items-center text-center">
+                                    <h2 class="card-title text-3xl font-bold">Res Car!</h2>
+                                    <p>If a dog chews car whose car does he choose?</p>
+                                    <p class="text-2xl font-bold">924400 ৳৳</p>
+                                    <div onclick="  productCard(this)" class="card-actions">
+                                        <button class="btn btn-primary">Buy Now</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- card 11 -->
+                            <div class="card  bg-gray-900 shadow-2xl shadow-zinc-950 text-white">
+                                <figure class="px-10 pt-10">
+                                    <img src="images/picture-12.PNG" alt="Shoes" class="rounded-xl" />
+                                </figure>
+                                <div class="card-body items-center text-center">
+                                    <h2 class="card-title text-3xl font-bold">Black Car!</h2>
+                                    <p>If a dog chews car whose shoes Black car he choose?</p>
+                                    <p class="text-2xl font-bold">5005000 ৳৳</p>
+                                    <div onclick="  productCard(this)" class="card-actions">
+                                        <button class="btn btn-primary">Buy Now</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- card 12 -->
+                            <div class="card  bg-gray-900 shadow-2xl shadow-zinc-950 text-white">
+                                <figure class="px-10 pt-10">
+                                    <img src="images/picture-13.PNG" alt="Shoes" class="rounded-xl" />
+                                </figure>
+                                <div class="card-body items-center text-center">
+                                    <h2 class="card-title text-3xl font-bold">Yellow Car!</h2>
+                                    <p>If a dog chews car whose shoes Yellow car he choose?</p>
+                                    <p class="text-2xl font-bold">1005000 ৳৳</p>
+                                    <div onclick="  productCard(this)" class="card-actions">
+                                        <button class="btn btn-primary">Buy Now</button>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+                    <!-- Right Section  -->
+
+                    <div class="  ">
+
+                        <div class=" sticky top-11 text-center">
+                            <div class="bg-slate-100 rounded-xl p-10 ">
+                                <h2 class="text-2xl font-bold mb-4 text-center">Amount Section</h2>
+                                <div class="flex flex-row gap-5 items-center">
+                                    <div><img class="mx-auto rounded-full my-5" src="./images/xxx.gif" alt=""></div>
+                                    <div class="mx-auto rounded-xl my-5 ">
+                                        <h3 class="text-xl font-medium">Coupon</h3>
+                                        <h1 class="text-2xl font-semibold text-green-800 animate-bounce">SELL1000</h1>
+                                        <h1 class="text-3xl font-bold text-pink-700 animate-ping">30%</h1>
+                                    </div>
+                                </div>
+                                <input id="inputT" class="p-3 rounded-xl text-center text-xl" type="text" placeholder="COUPON">
+                                <button onclick="applyDiscount()"
+                                    class="bg-green-700 py-2 px-5 rounded-xl mt-4 hover:bg-green-900  text-white text-xl" id="apply" disabled >Apply</button>
+                            </div>
+                            <div class="bg-slate-100 rounded-xl p-4 mt-5">
+                                <hr class=" p-2">
+                                <div id="tag" class="my-2 text-left p-5 text-2xl font-bold text-green-700">
+
+                                </div>
+                                <hr class=" p-2">
+                                <div class="text-left p-5">
+                                    <h2 class="text-xl">Total Price: <span class="text-orange-500 font-bold" id="totalTk"> 00 </span><span class="text-green-500"> ৳৳</span></h2>
+                                    <h2 class="text-xl my-2">Discount: <span class="text-orange-500 font-bold" id="discountTk"> 00 </span><span class="text-green-500"> ৳৳</span></h2>
+                                    <h2 class="text-xl">Total: <span class="text-orange-500 font-bold" id="totalAmount"> 00 </span><span class="text-green-500"> ৳৳</span></h2>
+                                </div>
+                                <hr class=" p-5 mt-3">
+                                <!-- Open the modal using ID.showModal() method -->
+                                <button id="cong" class="bg-green-700 hover:bg-green-900 text-white text-2xl font-bold px-10 py-3 rounded-xl my-2" onclick="my_modal_5.showModal()" disabled>CONFIRM</button>
+                                <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+                                    <form method="dialog" class="modal-box">
+                                        <img class="rounded-full mx-auto " src="images/congratulation1.png" alt="">
+                                        <h3 class="text-4xl font-extrabold text-pink-700 "  >Congratulations!</h3>
+                                        <p class="py-4 mx-[40%]"><img src="images/zzz.gif" alt=""></p>
+                                        <div class="px-10">
+                                            <button class="bg-green-700  text-white text-2xl font-bold px-10 py-3 rounded-xl my-2 w-full" id="home">Go Home</button>
+                                        </div>
+                                    </form>
+                                </dialog>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+    <script src="index.js"></script>
+</body>
+
+</html>
